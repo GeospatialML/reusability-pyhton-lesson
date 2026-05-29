@@ -67,7 +67,9 @@ contact: 'r.aguilar at utwente dot nl'
 
 # Order of episodes in your lesson
 episodes: 
-- introduction.md
+- 01-model-reuse-repro.md
+- 02-intro-mlops.md
+- 03-using-ml-flow.md
 
 # Information for Learners
 learners: 
