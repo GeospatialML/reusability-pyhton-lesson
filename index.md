@@ -12,6 +12,7 @@ After following this lesson, learners will be able to:
 
 ::: prereq
 
+* first prereq... 
 * Have completed the first lesson/unit on ML - core concepts or possess equivalent knowledge. Material of this lesson is available at: XXX
 * Competent geospatial modeler and designer of experiments/scenarios
 * Completing the second lesson on spatial ML is useful but not a hard prerequisite 
