@@ -1,7 +1,7 @@
 ---
 title: "Using MLFlow"
-teaching: 0 # teaching time in minutes
-exercises: 0 # exercise time in minutes
+teaching: 10 # teaching time in minutes
+exercises: 2 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -12,11 +12,8 @@ exercises: 0 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Configure your development environment to MLflow
-- Apply autologging and manual tracking in a simple machine learning pipeline 
-- Describe the main components and use of the MLflow UI
-- Configure customized tracking
-- Query experiments programatically
+- Explain how to use markdown with The Carpentries Workbench
+- Demonstrate how to include pieces of code, figures, and nested challenge blocks
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -115,4 +112,3 @@ Cool, right?
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 [r-markdown]: https://rmarkdown.rstudio.com/
-
