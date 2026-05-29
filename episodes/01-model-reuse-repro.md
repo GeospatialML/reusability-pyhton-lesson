@@ -22,6 +22,15 @@ exercises: 0 # exercise time in minutes
 
 This is an episode 
 
+::: discussion
+why is repro important?
+
+::: hint
+this is my hint
+:::
+
+:::
+
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
 Inline instructor notes can help inform instructors of timing challenges
