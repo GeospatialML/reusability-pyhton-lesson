@@ -74,14 +74,13 @@ learners:
 
 # Information for Instructors
 instructors: 
-Rosa Aguilar
-Sarah Alidoost 
-Raul Zurita-Milla
+- Rosa Aguilar
+- Sarah Alidoost 
+- Raul Zurita-Milla
 # Learner Profiles
 profiles: 
-https://people.utwente.nl/r.aguilar
-https://www.linkedin.com/in/fakhereh-sarah-alidoost-11a24a89/
-https://people.utwente.nl/r.zurita-milla
+- https://people.utwente.nl/r.aguilar
+- https://people.utwente.nl/r.zurita-milla
 
 # Customisation ---------------------------------------------
 #
