@@ -8,9 +8,9 @@ Data versioning will be addressed using tools such as Data Versioning Control (h
 
 ## Maintainers
 
-Rosa Aguilar
-Sarah Alidoost
-Raul Zurita-Milla
+Rosa Aguilar <br>
+Sarah Alidoost <br>
+Raul Zurita-Milla <br>
 
 If you have any questions, contact [@rosaguilar](https://github.com/rosaguilar)
 
