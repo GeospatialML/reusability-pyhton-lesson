@@ -10,7 +10,7 @@ After following this lesson, learners will be able to:
 * Design a minimal MLOps workflow/pipeline using *MLflow* to track modelling experiments
 * Apply MLOps tools correctly on a *use case* to reproduce an experiment what for?: #)
 
-## List of prerequisite knowledge
+::: prereq
 
 * Have completed the first lesson/unit on ML - core concepts or possess equivalent knowledge. Material of this lesson is available at: XXX
 * Competent geospatial modeler and designer of experiments/scenarios
@@ -19,3 +19,5 @@ After following this lesson, learners will be able to:
 * Competent in version control 
 * Some knowledge about computational resources (HPC, cloud, ...) and relevant concepts (GPU, CPU, data types, ...)? 
 * Familiarity with [FAIR data principles](https://www.go-fair.org/fair-principles/) and [FAIR software principles](https://zenodo.org/records/6623556)?
+
+:::
