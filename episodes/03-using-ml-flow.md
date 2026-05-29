@@ -52,18 +52,18 @@ associated with the lessons. They appear in the "Instructor View"
 ## Challenge 1: Configuring your environment?
 
 You want MLflow to log all your experiments to a remote tracking server at http://my-server:5000. Which line of Python code should you add before starting your run?
-<ul>
-<li>A. mlflow.set_experiment("http://my-server:5000")</li>
-<li>B. mlflow.set_tracking_uri("http://my-server:5000")</li>
-<li>C. mlflow.connect("http://my-server:5000")</li>
-<li>D. mlflow.server.start("http://my-server:5000")</li>
-</ul>
+
+1. mlflow.set_experiment("http://my-server:5000")
+2. mlflow.set_tracking_uri("http://my-server:5000")
+3. mlflow.connect("http://my-server:5000")
+4. mlflow.server.start("http://my-server:5000")
+
 :::::::::::::::::::::::: solution 
 
 ## Output
  
 ```output
-[B] "This new lesson looks good"
+[2] "This new lesson looks good"
 ```
 
 :::::::::::::::::::::::::::::::::
