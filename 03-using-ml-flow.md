@@ -12,8 +12,13 @@ exercises: 2 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with The Carpentries Workbench
+- Configure your development environment to MLflow
 - Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Apply autologging and manual tracking in a simple machine learning pipeline
+- Describe the main components and use of the MLflow UI
+- Configure customized tracking
+- Query experiments programatically
+ 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
