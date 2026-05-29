@@ -2,8 +2,8 @@
 site: sandpaper::sandpaper_site
 ---
 
-This is a new lesson built with [The Carpentries Workbench][workbench]. 
-
-
-[workbench]: https://carpentries.github.io/sandpaper-docs
-
+## Learning Objectives
+After following this lesson, learners will be able to:
+ 
+* Design a minimal MLOps workflow/pipeline using *MLflow* to track modelling experiments
+* Apply MLOps tools correctly on a *use case* to reproduce an experiment what for?: #) 
