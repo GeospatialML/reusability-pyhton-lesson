@@ -49,20 +49,21 @@ associated with the lessons. They appear in the "Instructor View"
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
-## Challenge 1: Can you do it?
+## Challenge 1: Configuring your environment?
 
-What is the output of this command?
-
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
-
+You want MLflow to log all your experiments to a remote tracking server at http://my-server:5000. Which line of Python code should you add before starting your run?
+<ul>
+<li>A. mlflow.set_experiment("http://my-server:5000")</li>
+<li>B. mlflow.set_tracking_uri("http://my-server:5000")</li>
+<li>C. mlflow.connect("http://my-server:5000")</li>
+<li>D. mlflow.server.start("http://my-server:5000")</li>
+</ul>
 :::::::::::::::::::::::: solution 
 
 ## Output
  
 ```output
-[1] "This new lesson looks good"
+[B] "This new lesson looks good"
 ```
 
 :::::::::::::::::::::::::::::::::
