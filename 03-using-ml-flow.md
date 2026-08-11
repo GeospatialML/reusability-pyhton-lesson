@@ -6,14 +6,14 @@ exercises: 2 # exercise time in minutes
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+- What do you need to reproduce a geospatial machine learning model? 
+How can you use MLFlow to support?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Configure your development environment to MLflow
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
 - Apply autologging and manual tracking in a simple machine learning pipeline
 - Describe the main components and use of the MLflow UI
 - Configure customized tracking
@@ -24,11 +24,7 @@ exercises: 2 # exercise time in minutes
 
 ## Introduction
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html) for static files and
-[R Markdown][r-markdown] for dynamic files that can render code into output. 
-Please refer to the [Introduction to The Carpentries 
-Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
+This is a lesson you wil learn how to enable model reproducibility by experiment tracking using MLFLOw
 
 What you need to know is that there are three sections required for a valid
 Carpentries lesson:
@@ -87,6 +83,18 @@ accessibility purposes'}`
 
 ![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
 
+::::::::::::::::::::::::::::::::::::: Keep in mind
+
+MLFlow limitations.
+
+MLflow tracks what you tell it to log.
+MLflow will not catch unst random seeds, floating point differences across hardware,
+or untracked manual data cleaning step.
+For geospatial dataset, it is useful to lo CRS/projection details
+or data versions as parameters or tags because they are not capture automatically
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::: callout
 
 Callout sections can highlight information.
@@ -97,7 +105,6 @@ content that is not central to the narrative of the lesson,
 e.g. by providing the answer to a commonly-asked question.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
 
 ## Math
 

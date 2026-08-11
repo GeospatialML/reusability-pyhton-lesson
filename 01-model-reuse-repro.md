@@ -1,26 +1,77 @@
 ---
-title: "modelling and model reusability and reproduciblity in the context of a case study"
+title: "Modelling and model reusability and reproduciblity in the context of a case study"
 teaching: 0 # teaching time in minutes
 exercises: 0 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- why is model reuse and repro important?  
+- Why is model reusability and reproducibility important?  
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Describe/list/enumerate the main phases of data-driven geospatial modelling
-- Discuss the importance (aka, the why) of geospatial model reusability and reproduciblity
+- Describe the main phases of data-driven geospatial modelling
+- Explain the importance of geospatial model reusability and reproduciblity
 - Discuss the main challenges of geospatial model reusability and reproduciblity 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
-This is an episode 
+In this lesson, you will learn why reusability and reproducibility matter in geospatial modelling.
+
+We begin by introducing the main phases of data-driven geospatial modelling. Then, we move on to model reusability and reproducibility.
+
+We close by discussing the main challenges of reusability and reproducibility in geospatial modelling.
+
+
+
+## Geospatial modelling process - general workflow
+
+data-driven approaches, meaning that models are built with parameters learned from observations’ data and aim to simulate new data minimally different from the “ground truth” under the same set of descriptive features. Among the standards guiding the implementation of data-driven model applications in general, CRISP-
+
+In this episode we focus on data-driven approaches which mean that models learn their parameters from observations. CRISP-DM is the most well-known standard guiding data-driven modellig. The figure below illustrate the CRISP-DM adapted to geospatial data as envisoned by [1]. 
+
+![Modelling workflow. Adapted from [1]](modelling_workflow.png){alt='Modelling workflow'} 
+
+1. Spatial data collection
+
+
+2. Spatial data analisys
+
+
+3. Model building
+
+
+4. Validation
+
+
+5. Model deployment
+
+
+## Model reusability and reproducibility
+
+1.2	Discuss the importance (aka, the why) of geospatial model reusability and reproducibility
+•	Provide examples. For instance, update/reuse models when new data / missions become available. 
+•	Geospatial Foundation models are meant to be reused for various downstream tasks – using data from various EO missions
+
+
+## Challenges of reusability and reproducibility in geospatial modelling
+
+
+	
+    Reproducibility across OS / Interoperability (awareness level)
+	Metadata and model documentation
+	Data standards in the geosciences
+	Geospatial data and model repositories 
+	Specific libraries xarray and geopandas – Community standards/preferences and compatibility with MLOps
+	Open models/weights for deep learning models 
+	Knowledge safety. Sensitive data. 
+
+
+
 
 ::: discussion
 why is repro important?
@@ -106,5 +157,11 @@ Cool, right?
 - Run `sandpaper::build_lesson()` to preview your lesson locally
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+## References
+
+[1] Koldasbayeva, D., Tregubova, P., Gasanov, M. et al. Challenges in data-driven geospatial modeling for environmental research and practice. Nat Commun 15, 10700 (2024). https://doi.org/10.1038/s41467-024-55240-8
+
+
 
 [r-markdown]: https://rmarkdown.rstudio.com/
