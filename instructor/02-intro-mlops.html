@@ -199,7 +199,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="01-model-reuse-repro.html">1. modelling and model reusability and reproduciblity in the context of a case study</a>
+        <a href="01-model-reuse-repro.html">1. Modelling and model reusability and reproduciblity in the context of a case study</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -208,12 +208,21 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         2. Introduction to MLOps
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#mlops">MLOPs</a></li>
+<li><a href="#data-versioning">Data versioning</a></li>
+<li><a href="#section"></a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -276,7 +285,7 @@
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="../instructor/01-model-reuse-repro.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: modelling and model
+          Previous: Modelling and model
         </a>
         <a class="chapter-link float-end" href="../instructor/03-using-ml-flow.html" rel="next">
           Next: Using MLFlow...
@@ -285,7 +294,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Introduction to MLOps</h1>
-        <p>Last updated on 2026-05-29 |
+        <p>Last updated on 2026-08-11 |
 
         <a href="https://github.com/GeospatialML/reusability-pyhton-lesson/edit/main/episodes/02-intro-mlops.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -315,27 +324,35 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>explain data versioning</li>
-<li>manage models (train and save)</li>
-<li>track experiments (key terms autologging and manual)</li>
-<li>identify common MLOps tools in geospatial modeling</li>
+<ul><li>Explain data versioning</li>
+<li>Manage models (train and save)</li>
+<li>Track experiments (key terms autologging and manual)</li>
+<li>Identify common MLOps tools in geospatial modeling</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<div id="data-versioning" class="callout challenge">
+<section><h2 class="section-heading" id="mlops">MLOPs<a class="anchor" aria-label="anchor" href="#mlops"></a></h2>
+<hr class="half-width"><p>MLOps is a set of practices, adapted from DevOps, aimed at supporting
+collaboration throughout the development and deployment of machine
+learning models. A core part of this is experiment reproducibility - it
+lets teams share, compare, and verify results with confidence.</p>
+</section><section><h2 class="section-heading" id="data-versioning">Data versioning<a class="anchor" aria-label="anchor" href="#data-versioning"></a></h2>
+<hr class="half-width"><p>Let’s have a look at the directory of phenology dataset, which of the
+following are correct:</p>
+<p>The link to the data is … The version of data is …. Data is
+preprocessed Metadata is available.</p>
+</section><section><h2 class="section-heading" id="section"></h2>
+<hr class="half-width"><div id="challenge1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="data-versioning" class="callout-inner">
-<h3 class="callout-title">Data versioning</h3>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
 <div class="callout-content">
-<p>Let’s have a look at the directory of phenology dataset, which of the
-following are correct:</p>
-<p>The link to the data is … The version of data is …. Data is
-preprocessed Metadata is available.</p>
+
 </div>
 </div>
 </div>
@@ -367,10 +384,7 @@ preprocessed Metadata is available.</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/01-model-reuse-repro.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/03-using-ml-flow.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -379,7 +393,7 @@ any links that you are not going to use.
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="../instructor/01-model-reuse-repro.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: modelling and model
+          Previous: Modelling and model
         </a>
         <a class="chapter-link float-end" href="../instructor/03-using-ml-flow.html" rel="next">
           Next: Using MLFlow...
@@ -430,7 +444,7 @@ any links that you are not going to use.
   "url": "https://GeospatialML.github.io/reusability-pyhton-lesson/instructor/02-intro-mlops.html",
   "identifier": "https://GeospatialML.github.io/reusability-pyhton-lesson/instructor/02-intro-mlops.html",
   "dateCreated": "2026-05-28",
-  "dateModified": "2026-05-29",
+  "dateModified": "2026-08-11",
   "datePublished": "2026-08-11"
 }
 

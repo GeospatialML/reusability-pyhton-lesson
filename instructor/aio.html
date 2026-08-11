@@ -237,7 +237,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="01-model-reuse-repro.html">1. modelling and model reusability and reproduciblity in the context of a case study</a>
+        <a href="01-model-reuse-repro.html">1. Modelling and model reusability and reproduciblity in the context of a case study</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -325,9 +325,9 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>All in One View</h1>
         
-<section id="aio-01-model-reuse-repro"><p>Content from <a href="01-model-reuse-repro.html">modelling and model reusability and reproduciblity in the context of a case study</a></p>
+<section id="aio-01-model-reuse-repro"><p>Content from <a href="01-model-reuse-repro.html">Modelling and model reusability and reproduciblity in the context of a case study</a></p>
 <hr>
-<p>Last updated on 2026-05-29 |
+<p>Last updated on 2026-08-11 |
 
         <a href="https://github.com/GeospatialML/reusability-pyhton-lesson/edit/main/episodes/01-model-reuse-repro.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
@@ -342,7 +342,7 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>why is model reuse and repro important?</li>
+<li>Why is model reusability and reproducibility important?</li>
 </ul>
 </div>
 </div>
@@ -352,10 +352,9 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Describe/list/enumerate the main phases of data-driven geospatial
-modelling</li>
-<li>Discuss the importance (aka, the why) of geospatial model
-reusability and reproduciblity</li>
+<li>Describe the main phases of data-driven geospatial modelling</li>
+<li>Explain the importance of geospatial model reusability and
+reproduciblity</li>
 <li>Discuss the main challenges of geospatial model reusability and
 reproduciblity</li>
 </ul>
@@ -367,7 +366,56 @@ reproduciblity</li>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
-<p>This is an episode</p>
+<p>In this lesson, you will learn why reusability and reproducibility
+matter in geospatial modelling.</p>
+<p>We begin by introducing the main phases of data-driven geospatial
+modelling. Then, we move on to model reusability and
+reproducibility.</p>
+<p>We close by discussing the main challenges of reusability and
+reproducibility in geospatial modelling.</p>
+</section><section><h2 class="section-heading" id="geospatial-modelling-process---general-workflow">Geospatial modelling process - general workflow<a class="anchor" aria-label="anchor" href="#geospatial-modelling-process---general-workflow"></a>
+</h2>
+<hr class="half-width">
+<p>data-driven approaches, meaning that models are built with parameters
+learned from observations’ data and aim to simulate new data minimally
+different from the “ground truth” under the same set of descriptive
+features. Among the standards guiding the implementation of data-driven
+model applications in general, CRISP-</p>
+<p>In this episode we focus on data-driven approaches which mean that
+models learn their parameters from observations. CRISP-DM is the most
+well-known standard guiding data-driven modellig. The figure below
+illustrate the CRISP-DM adapted to geospatial data as envisoned by
+[1].</p>
+<figure><img src="../modelling_workflow.png" alt="Modelling workflow" class="figure mx-auto d-block"><div class="figcaption">Modelling workflow. Adapted from [1]</div>
+</figure><ol style="list-style-type: decimal">
+<li><p>Spatial data collection</p></li>
+<li><p>Spatial data analisys</p></li>
+<li><p>Model building</p></li>
+<li><p>Validation</p></li>
+<li><p>Model deployment</p></li>
+</ol></section><section><h2 class="section-heading" id="model-reusability-and-reproducibility">Model reusability and reproducibility<a class="anchor" aria-label="anchor" href="#model-reusability-and-reproducibility"></a>
+</h2>
+<hr class="half-width">
+<p>1.2 Discuss the importance (aka, the why) of geospatial model
+reusability and reproducibility • Provide examples. For instance,
+update/reuse models when new data / missions become available. •
+Geospatial Foundation models are meant to be reused for various
+downstream tasks – using data from various EO missions</p>
+</section><section><h2 class="section-heading" id="challenges-of-reusability-and-reproducibility-in-geospatial-modelling">Challenges of reusability and reproducibility in geospatial
+modelling<a class="anchor" aria-label="anchor" href="#challenges-of-reusability-and-reproducibility-in-geospatial-modelling"></a>
+</h2>
+<hr class="half-width">
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="ex">Reproducibility</span> across OS / Interoperability <span class="er">(</span><span class="ex">awareness</span> level<span class="kw">)</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="ex">Metadata</span> and model documentation</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="ex">Data</span> standards in the geosciences</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="ex">Geospatial</span> data and model repositories </span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a><span class="ex">Specific</span> libraries xarray and geopandas – Community standards/preferences and compatibility with MLOps</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1" aria-label="code-block-1-6"></a><span class="ex">Open</span> models/weights for deep learning models </span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a><span class="ex">Knowledge</span> safety. Sensitive data. </span></code></pre>
+</div>
 <div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -381,7 +429,7 @@ reproduciblity</li>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <p>this is my hint</p>
 </div>
@@ -396,7 +444,7 @@ reproduciblity</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Inline instructor notes can help inform instructors of timing
 challenges associated with the lessons. They appear in the “Instructor
@@ -414,7 +462,7 @@ View”</p>
 <h3 class="callout-title">Challenge 1: Can you do it?</h3>
 <div class="callout-content">
 <p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -428,7 +476,7 @@ View”</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -457,7 +505,7 @@ challenge blocks?</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -515,13 +563,19 @@ locally</li>
 </div>
 </div>
 </div>
+</section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h2>
+<hr class="half-width">
+<p>[1] Koldasbayeva, D., Tregubova, P., Gasanov, M. et al. Challenges in
+data-driven geospatial modeling for environmental research and practice.
+Nat Commun 15, 10700 (2024). <a href="https://doi.org/10.1038/s41467-024-55240-8" class="external-link uri">https://doi.org/10.1038/s41467-024-55240-8</a></p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
 </section></section><section id="aio-02-intro-mlops"><p>Content from <a href="02-intro-mlops.html">Introduction to MLOps</a></p>
 <hr>
-<p>Last updated on 2026-05-29 |
+<p>Last updated on 2026-08-11 |
 
         <a href="https://github.com/GeospatialML/reusability-pyhton-lesson/edit/main/episodes/02-intro-mlops.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -547,28 +601,41 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>explain data versioning</li>
-<li>manage models (train and save)</li>
-<li>track experiments (key terms autologging and manual)</li>
-<li>identify common MLOps tools in geospatial modeling</li>
+<li>Explain data versioning</li>
+<li>Manage models (train and save)</li>
+<li>Track experiments (key terms autologging and manual)</li>
+<li>Identify common MLOps tools in geospatial modeling</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div id="data-versioning" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="data-versioning" class="callout-inner">
-<h3 class="callout-title">Data versioning</h3>
-<div class="callout-content">
+<section><h2 class="section-heading" id="mlops">MLOPs<a class="anchor" aria-label="anchor" href="#mlops"></a>
+</h2>
+<hr class="half-width">
+<p>MLOps is a set of practices, adapted from DevOps, aimed at supporting
+collaboration throughout the development and deployment of machine
+learning models. A core part of this is experiment reproducibility - it
+lets teams share, compare, and verify results with confidence.</p>
+</section><section><h2 class="section-heading" id="data-versioning">Data versioning<a class="anchor" aria-label="anchor" href="#data-versioning"></a>
+</h2>
+<hr class="half-width">
 <p>Let’s have a look at the directory of phenology dataset, which of the
 following are correct:</p>
 <p>The link to the data is … The version of data is …. Data is
 preprocessed Metadata is available.</p>
+</section><section><h2 class="section-heading" id="section"></h2>
+<hr class="half-width">
+<div id="challenge1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+
 </div>
 </div>
 </div>
@@ -597,9 +664,14 @@ preprocessed Metadata is available.</p>
 </ul>
 </div>
 </div>
-</div></section><section id="aio-03-using-ml-flow"><p>Content from <a href="03-using-ml-flow.html">Using MLFlow</a></p>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-03-using-ml-flow"><p>Content from <a href="03-using-ml-flow.html">Using MLFlow</a></p>
 <hr>
-<p>Last updated on 2026-05-29 |
+<p>Last updated on 2026-08-11 |
 
         <a href="https://github.com/GeospatialML/reusability-pyhton-lesson/edit/main/episodes/03-using-ml-flow.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -614,8 +686,8 @@ preprocessed Metadata is available.</p>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>What do you need to reproduce a geospatial machine learning model?
+How can you use MLFlow to support?</li>
 </ul>
 </div>
 </div>
@@ -626,8 +698,6 @@ preprocessed Metadata is available.</p>
 <h3 class="card-title">Objectives</h3>
 <ul>
 <li>Configure your development environment to MLflow</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
 <li>Apply autologging and manual tracking in a simple machine learning
 pipeline</li>
 <li>Describe the main components and use of the MLflow UI</li>
@@ -642,12 +712,8 @@ pipeline</li>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
-Markdown</a> for dynamic files that can render code into output. Please
-refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
+<p>This is a lesson you wil learn how to enable model reproducibility by
+experiment tracking using MLFLOw</p>
 <p>What you need to know is that there are three sections required for a
 valid Carpentries lesson:</p>
 <ol style="list-style-type: decimal">
@@ -745,7 +811,15 @@ challenge blocks?</h3>
 syntax:</p>
 <p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
 <figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure><div id="callout1" class="callout">
+</figure><p>::::::::::::::::::::::::::::::::::::: Keep in mind</p>
+<p>MLFlow limitations.</p>
+<p>MLflow tracks what you tell it to log. MLflow will not catch unst
+random seeds, floating point differences across hardware, or untracked
+manual data cleaning step. For geospatial dataset, it is useful to lo
+CRS/projection details or data versions as parameters or tags because
+they are not capture automatically</p>
+<p>::::::::::::::::::::::::::::::::::::::::::::::::</p>
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
