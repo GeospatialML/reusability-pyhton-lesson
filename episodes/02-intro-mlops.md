@@ -13,14 +13,19 @@ exercises: 2 # exercise time in minutes
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- explain data versioning 
-- manage models (train and save)
-- track experiments (key terms autologging and manual)
-- identify common MLOps tools in geospatial modeling
+- Explain data versioning 
+- Manage models (train and save)
+- Track experiments (key terms autologging and manual)
+- Identify common MLOps tools in geospatial modeling
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: challenge 
+## MLOPs 
+
+MLOps is a set of practices, adapted from DevOps, aimed at supporting collaboration throughout the development and deployment of machine learning models.
+A core part of this is experiment reproducibility - it lets teams share, compare, and verify results with confidence.
+
+
 
 ## Data versioning
 
@@ -30,6 +35,10 @@ The link to the data is …
 The version of data is ….
 Data is preprocessed
 Metadata is available.
+
+## 
+
+::::::::::::::::::::::::::::::::::::: challenge 
 
 :::::::::::::::::::::::: solution 
 
