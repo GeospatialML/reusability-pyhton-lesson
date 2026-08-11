@@ -70,6 +70,8 @@ episodes:
 - 01-model-reuse-repro.md
 - 02-intro-mlops.md
 - 03-using-ml-flow.md
+- 04-using-DVC.md
+- 05-reproducing-a-model.md
 
 # Information for Learners
 learners: 
