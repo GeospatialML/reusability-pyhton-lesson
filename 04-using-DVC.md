@@ -1,23 +1,23 @@
 ---
-title: "Using MLFlow"
+title: "Data Version Control - DVC"
 teaching: 10 # teaching time in minutes
 exercises: 2 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+- What is data versioning?
+- What are popular tools for data versioning?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Configure your development environment to MLflow
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
-- Apply autologging and manual tracking in a simple machine learning pipeline
-- Describe the main components and use of the MLflow UI
-- Configure customized tracking
-- Query experiments programatically
+- Describe the main advantages of using DVC
+- Explain how DVC relates to other tools aiming to support reusability and reproducibility 
+- Configure your development environment to use a selected data version control tool
+- Apply data version control in a simple machine learning pipeline
+
  
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -69,7 +69,7 @@ You want MLflow to log all your experiments to a remote tracking server at http:
 :::::::::::::::::::::::::::::::::
 
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+## Challenge 2: hhow data versioning can contribute to model reusability and ?
 
 :::::::::::::::::::::::: solution 
 

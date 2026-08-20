@@ -1,12 +1,14 @@
 ---
-title: "Using MLFlow"
+title: "Reproducing a Model"
 teaching: 10 # teaching time in minutes
 exercises: 2 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+- What do you need to reuse someone's else model?
+- What do you need to reproduce someone's else results?
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
