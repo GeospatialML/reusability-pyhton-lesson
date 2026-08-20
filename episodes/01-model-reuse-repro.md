@@ -6,7 +6,8 @@ exercises: 0 # exercise time in minutes
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- Why is model reusability and reproducibility important?  
+- Why is model reusability and reproducibility important? 
+- How can you facilitate your model reuse and reproducibility?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -53,10 +54,16 @@ In this episode we focus on data-driven approaches which mean that models learn 
 
 ## Model reusability and reproducibility
 
-1.2	Discuss the importance (aka, the why) of geospatial model reusability and reproducibility
+1.2	Importance (aka, the why) of geospatial model reusability and reproducibility
 •	Provide examples. For instance, update/reuse models when new data / missions become available. 
 •	Geospatial Foundation models are meant to be reused for various downstream tasks – using data from various EO missions
 
+Training machine learning models require a vast mount 
+### Pre-trained models
+
+
+
+### Foundational models
 
 ## Challenges of reusability and reproducibility in geospatial modelling
 
