@@ -273,7 +273,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="04-using-DVC.html">4. Using MLFlow</a>
+        <a href="04-using-DVC.html">4. Data Version Control - DVC</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -285,7 +285,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="05-reproducing-a-model.html">5. Using MLFlow</a>
+        <a href="05-reproducing-a-model.html">5. Reproducing a Model</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -351,7 +351,7 @@
         
 <section id="aio-01-model-reuse-repro"><p>Content from <a href="01-model-reuse-repro.html">Modelling and model reusability and reproduciblity in the context of a case study</a></p>
 <hr>
-<p>Last updated on 2026-08-11 |
+<p>Last updated on 2026-08-20 |
 
         <a href="https://github.com/GeospatialML/reusability-pyhton-lesson/edit/main/episodes/01-model-reuse-repro.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
@@ -367,6 +367,7 @@
 <h3 class="card-title">Questions</h3>
 <ul>
 <li>Why is model reusability and reproducibility important?</li>
+<li>How can you facilitate your model reuse and reproducibility?</li>
 </ul>
 </div>
 </div>
@@ -420,11 +421,17 @@ illustrate the CRISP-DM adapted to geospatial data as envisoned by
 </ol></section><section><h2 class="section-heading" id="model-reusability-and-reproducibility">Model reusability and reproducibility<a class="anchor" aria-label="anchor" href="#model-reusability-and-reproducibility"></a>
 </h2>
 <hr class="half-width">
-<p>1.2 Discuss the importance (aka, the why) of geospatial model
-reusability and reproducibility • Provide examples. For instance,
-update/reuse models when new data / missions become available. •
-Geospatial Foundation models are meant to be reused for various
-downstream tasks – using data from various EO missions</p>
+<p>1.2 Importance (aka, the why) of geospatial model reusability and
+reproducibility • Provide examples. For instance, update/reuse models
+when new data / missions become available. • Geospatial Foundation
+models are meant to be reused for various downstream tasks – using data
+from various EO missions</p>
+<p>Training machine learning models require a vast mount ### Pre-trained
+models</p>
+<div class="section level3">
+<h3 id="foundational-models">Foundational models<a class="anchor" aria-label="anchor" href="#foundational-models"></a>
+</h3>
+</div>
 </section><section><h2 class="section-heading" id="challenges-of-reusability-and-reproducibility-in-geospatial-modelling">Challenges of reusability and reproducibility in geospatial
 modelling<a class="anchor" aria-label="anchor" href="#challenges-of-reusability-and-reproducibility-in-geospatial-modelling"></a>
 </h2>
@@ -599,7 +606,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-02-intro-mlops"><p>Content from <a href="02-intro-mlops.html">Introduction to MLOps</a></p>
 <hr>
-<p>Last updated on 2026-08-11 |
+<p>Last updated on 2026-08-20 |
 
         <a href="https://github.com/GeospatialML/reusability-pyhton-lesson/edit/main/episodes/02-intro-mlops.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -635,21 +642,31 @@ any links that you are not going to use.
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="mlops">MLOPs<a class="anchor" aria-label="anchor" href="#mlops"></a>
+<section><h2 class="section-heading" id="mlops">MLOps<a class="anchor" aria-label="anchor" href="#mlops"></a>
 </h2>
 <hr class="half-width">
 <p>MLOps is a set of practices, adapted from DevOps, aimed at supporting
 collaboration throughout the development and deployment of machine
 learning models. A core part of this is experiment reproducibility - it
 lets teams share, compare, and verify results with confidence.</p>
+<p>Machine learning models reproducibility depends on data snapshots,
+random seeds, hardware/library version and hyperparameters not only the
+source code. MLOps tools enable capturing the entire experiment context,
+i.e., data version, code version, parameters, environment, resulting
+model and metrics. MLOps is positioned at the convergence of machine
+learning, software engineering, DevOps, and data engineering.</p>
+<p>There are several MLOps principles or best practices. However, in
+this lesson, we will focus on the best practices that primarily
+contribute to model’s reuse and reproducibility such as automation,</p>
 </section><section><h2 class="section-heading" id="data-versioning">Data versioning<a class="anchor" aria-label="anchor" href="#data-versioning"></a>
 </h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="section"></h2>
 <hr class="half-width">
 <p>Let’s have a look at the directory of phenology dataset, which of the
 following are correct:</p>
 <p>The link to the data is … The version of data is …. Data is
 preprocessed Metadata is available.</p>
-</section><section><h2 class="section-heading" id="section"></h2>
+</section><section><h2 class="section-heading" id="section-1"></h2>
 <hr class="half-width">
 <div id="challenge1" class="callout challenge">
 <div class="callout-square">
@@ -684,7 +701,14 @@ preprocessed Metadata is available.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>this is key point …</li>
+<li><p>MLOps is a set of practices, adapted from DevOps, aimed at
+supporting collaboration throughout the development and deployment of
+machine learning models</p></li>
+<li><p>DevOps is a set of practices, tools and principles that combines
+software development (Dev) and IT operations (Ops). Automation and
+collaboration DevOps practices such as Continuous Integration and
+Continuous Delivery (CI/CD) accelerate software development, improve
+deployment frequency and enhance system reliability.</p></li>
 </ul>
 </div>
 </div>
@@ -890,9 +914,9 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-04-using-DVC"><p>Content from <a href="04-using-DVC.html">Using MLFlow</a></p>
+</section></section><section id="aio-04-using-DVC"><p>Content from <a href="04-using-DVC.html">Data Version Control - DVC</a></p>
 <hr>
-<p>Last updated on 2026-08-11 |
+<p>Last updated on 2026-08-20 |
 
         <a href="https://github.com/GeospatialML/reusability-pyhton-lesson/edit/main/episodes/04-using-DVC.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -907,8 +931,202 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>What is data versioning?</li>
+<li>What are popular tools for data versioning?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Describe the main advantages of using DVC</li>
+<li>Explain how DVC relates to other tools aiming to support reusability
+and reproducibility</li>
+<li>Configure your development environment to use a selected data
+version control tool</li>
+<li>Apply data version control in a simple machine learning
+pipeline</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>This is a lesson created via The Carpentries Workbench. It is written
+in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
+for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
+Markdown</a> for dynamic files that can render code into output. Please
+refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
+Carpentries Workbench</a> for full documentation.</p>
+<p>What you need to know is that there are three sections required for a
+valid Carpentries lesson:</p>
+<ol style="list-style-type: decimal">
+<li>
+<code>questions</code> are displayed at the beginning of the episode
+to prime the learner for the content.</li>
+<li>
+<code>objectives</code> are the learning objectives for an episode
+displayed with the questions.</li>
+<li>
+<code>keypoints</code> are displayed at the end of the episode to
+reinforce the objectives.</li>
+</ol>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div class="accordion-body">
+<p>Inline instructor notes can help inform instructors of timing
+challenges associated with the lessons. They appear in the “Instructor
+View”</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-1-configuring-your-environment" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-1-configuring-your-environment" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Configuring your
+environment?</h3>
+<div class="callout-content">
+<p>You want MLflow to log all your experiments to a remote tracking
+server at <a href="http://my-server:5000" class="external-link uri">http://my-server:5000</a>. Which line of Python code should
+you add before starting your run?</p>
+<ol style="list-style-type: decimal">
+<li>mlflow.set_experiment(“<a href="http://my-server:5000" class="external-link uri">http://my-server:5000</a>”)</li>
+<li>mlflow.set_tracking_uri(“<a href="http://my-server:5000" class="external-link uri">http://my-server:5000</a>”)</li>
+<li>mlflow.connect(“<a href="http://my-server:5000" class="external-link uri">http://my-server:5000</a>”)</li>
+<li>mlflow.server.start(“<a href="http://my-server:5000" class="external-link uri">http://my-server:5000</a>”)</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>[2] "This new lesson looks good"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-hhow-data-versioning-can-contribute-to-model-reusability-and" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-2-hhow-data-versioning-can-contribute-to-model-reusability-and" class="callout-inner">
+<h3 class="callout-title">Challenge 2: hhow data versioning can
+contribute to model reusability and ?</h3>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>You can add a line with at least three colons and a
+<code>solution</code> tag.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
+</h2>
+<hr class="half-width">
+<p>You can use standard markdown for static figures with the following
+syntax:</p>
+<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
+<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
+</figure><div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Callout sections can highlight information.</p>
+<p>They are sometimes used to emphasise particularly important points
+but are also used in some lessons to present “asides”: content that is
+not central to the narrative of the lesson, e.g. by providing the answer
+to a commonly-asked question.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
+</h2>
+<hr class="half-width">
+<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
+create dynamic reports with {knitr}, so we now use mathjax to describe
+this:</p>
+<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
+<p>Cool, right?</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Use <code>.md</code> files for episodes when you want static
+content</li>
+<li>Use <code>.Rmd</code> files for episodes when you need to generate
+output</li>
+<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
+with your lesson</li>
+<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
+locally</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-05-reproducing-a-model"><p>Content from <a href="05-reproducing-a-model.html">Reproducing a Model</a></p>
+<hr>
+<p>Last updated on 2026-08-20 |
+
+        <a href="https://github.com/GeospatialML/reusability-pyhton-lesson/edit/main/episodes/05-reproducing-a-model.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What do you need to reuse someone’s else model?</li>
+<li>What do you need to reproduce someone’s else results?</li>
 </ul>
 </div>
 </div>
@@ -1085,201 +1303,6 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-05-reproducing-a-model"><p>Content from <a href="05-reproducing-a-model.html">Using MLFlow</a></p>
-<hr>
-<p>Last updated on 2026-08-11 |
-
-        <a href="https://github.com/GeospatialML/reusability-pyhton-lesson/edit/main/episodes/05-reproducing-a-model.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
-<div class="text-end">
-          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
-        </div>
-<div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
-<ul>
-<li>How do you write a lesson using Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-<ul>
-<li>Configure your development environment to MLflow</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
-<li>Apply autologging and manual tracking in a simple machine learning
-pipeline</li>
-<li>Describe the main components and use of the MLflow UI</li>
-<li>Configure customized tracking</li>
-<li>Query experiments programatically</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
-</h2>
-<hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
-Markdown</a> for dynamic files that can render code into output. Please
-refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
-<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
-  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
-</button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
-<div class="accordion-body">
-<p>Inline instructor notes can help inform instructors of timing
-challenges associated with the lessons. They appear in the “Instructor
-View”</p>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge-1-configuring-your-environment" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-1-configuring-your-environment" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Configuring your
-environment?</h3>
-<div class="callout-content">
-<p>You want MLflow to log all your experiments to a remote tracking
-server at <a href="http://my-server:5000" class="external-link uri">http://my-server:5000</a>. Which line of Python code should
-you add before starting your run?</p>
-<ol style="list-style-type: decimal">
-<li>mlflow.set_experiment(“<a href="http://my-server:5000" class="external-link uri">http://my-server:5000</a>”)</li>
-<li>mlflow.set_tracking_uri(“<a href="http://my-server:5000" class="external-link uri">http://my-server:5000</a>”)</li>
-<li>mlflow.connect(“<a href="http://my-server:5000" class="external-link uri">http://my-server:5000</a>”)</li>
-<li>mlflow.server.start(“<a href="http://my-server:5000" class="external-link uri">http://my-server:5000</a>”)</li>
-</ol>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
-<div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[2] "This new lesson looks good"</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within
-challenge blocks?</h3>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
-<div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
-</h2>
-<hr class="half-width">
-<p>You can use standard markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure><div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
-<div class="callout-content">
-<p>Callout sections can highlight information.</p>
-<p>They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present “asides”: content that is
-not central to the narrative of the lesson, e.g. by providing the answer
-to a commonly-asked question.</p>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
-</h2>
-<hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<span class="callout-header">Key Points</span>
-<div class="callout-inner">
-<div class="callout-content">
-<ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul>
-</div>
-</div>
-</div>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
 </section></section>
 </div>
     </main>
@@ -1330,8 +1353,8 @@ any links that you are not going to use.
   "url": "https://GeospatialML.github.io/reusability-pyhton-lesson/instructor/aio.html",
   "identifier": "https://GeospatialML.github.io/reusability-pyhton-lesson/instructor/aio.html",
   "dateCreated": "2026-05-28",
-  "dateModified": "2026-08-18",
-  "datePublished": "2026-08-18"
+  "dateModified": "2026-08-20",
+  "datePublished": "2026-08-20"
 }
 
   </script><script>
