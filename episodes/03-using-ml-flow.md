@@ -7,7 +7,7 @@ exercises: 2 # exercise time in minutes
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What do you need to reproduce a geospatial machine learning model? 
-How can you use MLFlow to support?
+- How can you use MLFlow to support reproducibility?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

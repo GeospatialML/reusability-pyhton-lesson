@@ -8,6 +8,7 @@ exercises: 2 # exercise time in minutes
 
 - What do you need to reuse someone's else model?
 - What do you need to reproduce someone's else results?
+- How reproducible is your model?
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -16,15 +17,19 @@ exercises: 2 # exercise time in minutes
 
 - Configure your development environment to MLflow
 - Demonstrate how to include pieces of code, figures, and nested challenge blocks
-- Apply autologging and manual tracking in a simple machine learning pipeline
-- Describe the main components and use of the MLflow UI
-- Configure customized tracking
-- Query experiments programatically
- 
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
+
+Perhaps this episode will include the full workflow for reproducibility, i.e, 
+Mlflow and DVC.
+
+
+
+
+
 
 This is a lesson created via The Carpentries Workbench. It is written in
 [Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html) for static files and

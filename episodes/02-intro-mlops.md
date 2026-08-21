@@ -34,6 +34,8 @@ There are several MLOps principles or best practices. However, in this lesson, w
 
 ## Data versioning
 
+Data versioning consist of recording incremental changes to datasets and documenting when those changes occurred.
+It provides the traceability required to support reproducible geospatial modelling.
 
 ##
 

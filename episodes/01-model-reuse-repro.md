@@ -49,7 +49,7 @@ Spatial data analysis explores the collected data to understand its structure, q
 
 3. Model building
 
-Model building covers the selection and training of one or more algorithms, ranging from classical machine learning methods such as Random Forest or LightGBM to deep learning architectures, on patches or samples derived from the study area. Feature engineering, hyperparameter selection, and the choice of loss function all take place here according to the nature of the task, i.e., regression, classification, or clustering. Experiment tracking tools such as MLflow are particularly valuable at this stage to log model versions, parameters, and training data hashes.
+Model building covers the selection and training of one or more algorithms, ranging from classical machine learning methods such as Random Forest or LightGBM to deep learning architectures, on patches or samples derived from the study area. Feature engineering, hyperparameter selection, and the choice of loss function all take place here according to the nature of the task, i.e., regression, classification, or clustering. Experiment tracking tools such as MLflow are particularly valuable at this stage to log model versions, parameters, and training features.
 
 4. Validation
 
@@ -66,7 +66,10 @@ Model deployment moves a validated model into operational use. This stage requir
 •	Provide examples. For instance, update/reuse models when new data / missions become available. 
 •	Geospatial Foundation models are meant to be reused for various downstream tasks – using data from various EO missions
 
-Training machine learning models require a vast mount 
+Training machine learning models require a vast amount of data; deep learning models in particular are data-hungry so  . From a scientific perspective, 
+Reproducibility is the ability to reproduce a ML experiment and obtain the same exact result [2]
+
+
 ### Pre-trained models
 
 
@@ -177,6 +180,6 @@ Cool, right?
 
 [1] Koldasbayeva, D., Tregubova, P., Gasanov, M. et al. Challenges in data-driven geospatial modeling for environmental research and practice. Nat Commun 15, 10700 (2024). https://doi.org/10.1038/s41467-024-55240-8
 
-
+[2] D. Kreuzberger, N. Kühl and S. Hirschl, "Machine Learning Operations (MLOps): Overview, Definition, and Architecture," in IEEE Access, vol. 11, pp. 31866-31879, 2023, doi: 10.1109/ACCESS.2023.3262138. keywords: {Interviews;Machine learning;Training;Collaboration;Bibliographies;Automation;Codes;CI/CD;DevOps;machine learning;MLOps;operations;workflow orchestration},
 
 [r-markdown]: https://rmarkdown.rstudio.com/
