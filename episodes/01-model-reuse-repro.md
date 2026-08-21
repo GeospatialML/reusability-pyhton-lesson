@@ -31,25 +31,33 @@ We close by discussing the main challenges of reusability and reproducibility in
 
 ## Geospatial modelling process - general workflow
 
-data-driven approaches, meaning that models are built with parameters learned from observations’ data and aim to simulate new data minimally different from the “ground truth” under the same set of descriptive features. Among the standards guiding the implementation of data-driven model applications in general, CRISP-
+Data-driven approaches, meaning that models are built with parameters learned from observations’ data and aim to simulate new data minimally different from the “ground truth” under the same set of descriptive features. Among the standards guiding the implementation of data-driven model applications in general, CRISP-DM (Cross-Industry Standard Process for Data Mining) remains the most widely adopted reference framework. CRISP-DM structures a modelling project into a series of iterative phases including problem and data understanding, data collection and preparation, model selection, model training and hyperparameters optimization, model evalution, deployment and inference. Rather than following a stricly linear approach, CRISP-DM adopts a cyclical one allowing insights and lessons learned in later stages to inform (feedback) and refined decisions made in earlier phases. 
 
-In this episode we focus on data-driven approaches which mean that models learn their parameters from observations. CRISP-DM is the most well-known standard guiding data-driven modellig. The figure below illustrate the CRISP-DM adapted to geospatial data as envisoned by [1]. 
+In this episode we focus on data-driven approaches which mean that models learn their parameters from observations. The figure below illustrate the CRISP-DM adapted to geospatial data as envisoned by [1]. 
+
 
 ![Modelling workflow. Adapted from [1]](modelling_workflow.png){alt='Modelling workflow'} 
 
 1. Spatial data collection
 
 
+Spatial data collection involves getting geospatial observations relevant to the study area, such as satellite imagery (e.g. Sentinel-2), aerial photography, LiDAR point clouds, or in-situ field measurements. This stage must account for spatial and temporal coverage, sensor resolution, and coordinate reference systems. Metadata documentation at this stage, including acquisition dates and preprocessing history, is essential for later reproducibility.
+
 2. Spatial data analisys
 
+Spatial data analysis explores the collected data to understand its structure, quality, and underlying spatial patterns before the modelling process. This includes data quality assessement such as handling missing or corrupted pixels, assessing spatial autocorrelation, inspecting class or value distributions, and visualizing the study area to identify potential confounders such as clouds, water bodies, or shadow. Exploratory analysis at this stage often reveals data-quality issues and spatial patterns.
 
 3. Model building
 
+Model building covers the selection and training of one or more algorithms, ranging from classical machine learning methods such as Random Forest or LightGBM to deep learning architectures, on patches or samples derived from the study area. Feature engineering, hyperparameter selection, and the choice of loss function all take place here according to the nature of the task, i.e., regression, classification, or clustering. Experiment tracking tools such as MLflow are particularly valuable at this stage to log model versions, parameters, and training data hashes.
 
 4. Validation
 
+Validation assesses whether the trained model generalizes beyond the data it was trained on. Metrics should be chosen to reflect the spatial nature of the task such as error metrics for regression, or robust accuracy metrics for classification. Results should be interpreted alongside spatial error maps.
 
 5. Model deployment
+
+Model deployment moves a validated model into operational use. This stage requires monitoring for performance drift as new imagery or conditions diverge from the training distribution, along with clear versioning so that predictions can always be traced back to a specific model and dataset version.
 
 
 ## Model reusability and reproducibility
