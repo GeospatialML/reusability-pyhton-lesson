@@ -7,28 +7,31 @@ exercises: 2 # exercise time in minutes
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What is data versioning?
-- What are popular tools for data versioning?
+- Why data versioning is important for reproducibility?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Describe the main advantages of using DVC
+- Describe the benefits of data versioning
 - Explain how DVC relates to other tools aiming to support reusability and reproducibility 
-- Configure your development environment to use a selected data version control tool
-- Apply data version control in a simple machine learning pipeline
-
- 
+- Configure your development environment to use DVC
+- Apply DVC to a case study related to a machine learning pipeline
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html) for static files and
-[R Markdown][r-markdown] for dynamic files that can render code into output. 
-Please refer to the [Introduction to The Carpentries 
-Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
+Data versioning consist of recording incremental changes to datasets and documenting when those changes occurred.
+It provides the traceability required to support reproducible geospatial modelling.
+
+Data versioning enables users to leverage the following benefits:
+
+- Reproduce results by retrieving the exact dataset version used to train or evaluate a model.
+- Audit decisions by tracing a prediction back to the specific data that produced it.
+- Debug performance changes by comparing dataset versions across experiments.
+- Meet governance and compliance requirements by keeping a documented history of data modifications.
+
 
 What you need to know is that there are three sections required for a valid
 Carpentries lesson:
@@ -110,7 +113,7 @@ Cool, right?
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Use `.md` files for episodes when you want static content
+- Data versioning enable reproducibility but also traceability linking 
 - Use `.Rmd` files for episodes when you need to generate output
 - Run `sandpaper::check_lesson()` to identify any issues with your lesson
 - Run `sandpaper::build_lesson()` to preview your lesson locally
