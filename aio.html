@@ -349,7 +349,7 @@
         
 <section id="aio-01-model-reuse-repro"><p>Content from <a href="01-model-reuse-repro.html">Modelling and model reusability and reproduciblity in the context of a case study</a></p>
 <hr>
-<p>Last updated on 2026-08-20 |
+<p>Last updated on 2026-08-21 |
 
         <a href="https://github.com/GeospatialML/reusability-pyhton-lesson/edit/main/episodes/01-model-reuse-repro.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -398,24 +398,74 @@ reproducibility in geospatial modelling.</p>
 </section><section><h2 class="section-heading" id="geospatial-modelling-process---general-workflow">Geospatial modelling process - general workflow<a class="anchor" aria-label="anchor" href="#geospatial-modelling-process---general-workflow"></a>
 </h2>
 <hr class="half-width">
-<p>data-driven approaches, meaning that models are built with parameters
+<p>Data-driven approaches, meaning that models are built with parameters
 learned from observations’ data and aim to simulate new data minimally
 different from the “ground truth” under the same set of descriptive
 features. Among the standards guiding the implementation of data-driven
-model applications in general, CRISP-</p>
+model applications in general, CRISP-DM (Cross-Industry Standard Process
+for Data Mining) remains the most widely adopted reference framework.
+CRISP-DM structures a modelling project into a series of iterative
+phases including problem and data understanding, data collection and
+preparation, model selection, model training and hyperparameters
+optimization, model evalution, deployment and inference. Rather than
+following a stricly linear approach, CRISP-DM adopts a cyclical one
+allowing insights and lessons learned in later stages to inform
+(feedback) and refined decisions made in earlier phases.</p>
 <p>In this episode we focus on data-driven approaches which mean that
-models learn their parameters from observations. CRISP-DM is the most
-well-known standard guiding data-driven modellig. The figure below
+models learn their parameters from observations. The figure below
 illustrate the CRISP-DM adapted to geospatial data as envisoned by
 [1].</p>
 <figure><img src="modelling_workflow.png" alt="Modelling workflow" class="figure mx-auto d-block"><div class="figcaption">Modelling workflow. Adapted from [1]</div>
 </figure><ol style="list-style-type: decimal">
-<li><p>Spatial data collection</p></li>
-<li><p>Spatial data analisys</p></li>
-<li><p>Model building</p></li>
-<li><p>Validation</p></li>
-<li><p>Model deployment</p></li>
-</ol></section><section><h2 class="section-heading" id="model-reusability-and-reproducibility">Model reusability and reproducibility<a class="anchor" aria-label="anchor" href="#model-reusability-and-reproducibility"></a>
+<li>Spatial data collection</li>
+</ol>
+<p>Spatial data collection involves getting geospatial observations
+relevant to the study area, such as satellite imagery (e.g. Sentinel-2),
+aerial photography, LiDAR point clouds, or in-situ field measurements.
+This stage must account for spatial and temporal coverage, sensor
+resolution, and coordinate reference systems. Metadata documentation at
+this stage, including acquisition dates and preprocessing history, is
+essential for later reproducibility.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Spatial data analisys</li>
+</ol>
+<p>Spatial data analysis explores the collected data to understand its
+structure, quality, and underlying spatial patterns before the modelling
+process. This includes data quality assessement such as handling missing
+or corrupted pixels, assessing spatial autocorrelation, inspecting class
+or value distributions, and visualizing the study area to identify
+potential confounders such as clouds, water bodies, or shadow.
+Exploratory analysis at this stage often reveals data-quality issues and
+spatial patterns.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Model building</li>
+</ol>
+<p>Model building covers the selection and training of one or more
+algorithms, ranging from classical machine learning methods such as
+Random Forest or LightGBM to deep learning architectures, on patches or
+samples derived from the study area. Feature engineering, hyperparameter
+selection, and the choice of loss function all take place here according
+to the nature of the task, i.e., regression, classification, or
+clustering. Experiment tracking tools such as MLflow are particularly
+valuable at this stage to log model versions, parameters, and training
+data hashes.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Validation</li>
+</ol>
+<p>Validation assesses whether the trained model generalizes beyond the
+data it was trained on. Metrics should be chosen to reflect the spatial
+nature of the task such as error metrics for regression, or robust
+accuracy metrics for classification. Results should be interpreted
+alongside spatial error maps.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Model deployment</li>
+</ol>
+<p>Model deployment moves a validated model into operational use. This
+stage requires monitoring for performance drift as new imagery or
+conditions diverge from the training distribution, along with clear
+versioning so that predictions can always be traced back to a specific
+model and dataset version.</p>
+</section><section><h2 class="section-heading" id="model-reusability-and-reproducibility">Model reusability and reproducibility<a class="anchor" aria-label="anchor" href="#model-reusability-and-reproducibility"></a>
 </h2>
 <hr class="half-width">
 <p>1.2 Importance (aka, the why) of geospatial model reusability and
@@ -457,7 +507,7 @@ modelling<a class="anchor" aria-label="anchor" href="#challenges-of-reusability-
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <p>this is my hint</p>
 </div>
@@ -491,7 +541,7 @@ modelling<a class="anchor" aria-label="anchor" href="#challenges-of-reusability-
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -520,7 +570,7 @@ challenge blocks?</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -668,7 +718,7 @@ preprocessed Metadata is available.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The link to the data is … The version of data is …. Data is Not
 preprocessed Metadata is available.</p>
@@ -970,7 +1020,7 @@ you add before starting your run?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -999,7 +1049,7 @@ contribute to model reusability and ?</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -1150,7 +1200,7 @@ you add before starting your run?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1179,7 +1229,7 @@ challenge blocks?</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -1291,8 +1341,8 @@ any links that you are not going to use.
   "url": "https://GeospatialML.github.io/reusability-pyhton-lesson/aio.html",
   "identifier": "https://GeospatialML.github.io/reusability-pyhton-lesson/aio.html",
   "dateCreated": "2026-05-28",
-  "dateModified": "2026-08-20",
-  "datePublished": "2026-08-20"
+  "dateModified": "2026-08-21",
+  "datePublished": "2026-08-21"
 }
 
   </script><script>
