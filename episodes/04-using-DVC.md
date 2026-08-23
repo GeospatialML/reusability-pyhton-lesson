@@ -25,12 +25,20 @@ exercises: 2 # exercise time in minutes
 Data versioning consist of recording incremental changes to datasets and documenting when those changes occurred.
 It provides the traceability required to support reproducible geospatial modelling.
 
-Data versioning enables users to leverage the following benefits:
+Data versioning enables developers to leverage the following benefits:
 
 - Reproduce results by retrieving the exact dataset version used to train or evaluate a model.
 - Audit decisions by tracing a prediction back to the specific data that produced it.
 - Debug performance changes by comparing dataset versions across experiments.
 - Meet governance and compliance requirements by keeping a documented history of data modifications.
+
+In a nutshell,  data versioning support developers in answering the following questions:
+
+- Which version of the data was used to train this model?
+- Who modified the dataset and when?
+- What changes were made between dataset versions?
+- Can the results be reproduced using the exact same data?
+
 
 
 What you need to know is that there are three sections required for a valid

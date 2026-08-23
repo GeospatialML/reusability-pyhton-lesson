@@ -66,8 +66,10 @@ Model deployment moves a validated model into operational use. This stage requir
 •	Provide examples. For instance, update/reuse models when new data / missions become available. 
 •	Geospatial Foundation models are meant to be reused for various downstream tasks – using data from various EO missions
 
-Training machine learning models require a vast amount of data; deep learning models in particular are data-hungry so  . From a scientific perspective, 
-Reproducibility is the ability to reproduce a ML experiment and obtain the same exact result [2]
+Training machine learning models require a vast amount of data; deep learning models in particular are data-hungry so re-using them is crucial. Moreover, fine-tuning deep learning models, where you re-used a previously train model, is a common practice. Reusing models let scientist can understands what work and what does not, and enables fair comparison. 
+As new data become available, it is crucial that previously trained models can be reused
+
+Reproducibility is the ability to reproduce a ML experiment and obtain the same exact result [2]. It is essential for scientific rigour and for fair comparison between models, for example, when benchmarking different approaches to a specific problem. 
 
 
 ### Pre-trained models
@@ -92,7 +94,7 @@ Reproducibility is the ability to reproduce a ML experiment and obtain the same 
 
 
 ::: discussion
-why is repro important?
+Why is reproducibility important?
 
 ::: hint
 this is my hint
